@@ -1,13 +1,13 @@
 // tslint:disable:no-expression-statement
 import test from 'ava';
-import { validate, RULES } from '.';
+import { RULES, validate } from '.';
 
 test('validate(,{minLength: invalid})', t => {
-  t.throws(() => validate("", { minLength: 5 }), /minLength must be bigger than 8/)
+  t.throws(() => validate("", { minLength: 5 }), {message: /minLength must be bigger than 8/})
 });
 
 test('validate(,{maxLength: invalid})', t => {
-  t.throws(() => validate("", { maxLength: 30 }), /maxLength must be bigger than 50/)
+  t.throws(() => validate("", { maxLength: 30 }), {message: /maxLength must be bigger than 50/})
 });
 
 test('validate(minLength)', t => {

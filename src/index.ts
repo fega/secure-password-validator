@@ -56,18 +56,18 @@ export function validate(password: string, options: PasswordOptions = {}): Valid
   const lowercase = options.lowercase;
   const symbols = options.symbols;
 
-  if (minLength < 8) throw new RangeError('minLength must be bigger than 8')
+  if (minLength < 8) { throw new RangeError('minLength must be bigger than 8') }
 
-  if (maxLength < 50) throw new RangeError('maxLength must be bigger than 50')
+  if (maxLength < 50) { throw new RangeError('maxLength must be bigger than 50') }
 
-  if (password.length < minLength) errors.push(RULES.MIN_LENGTH)
-  if (password.length > maxLength) errors.push(RULES.MAX_LENGTH)
-  if (digits && !hasDigits(password)) errors.push(RULES.DIGITS)
-  if (letters && !hasLetters(password)) errors.push(RULES.LETTERS)
-  if (uppercase && !hasUppercase(password)) errors.push(RULES.UPPERCASE)
-  if (lowercase && !hasLowercase(password)) errors.push(RULES.LOWERCASE)
-  if (symbols && !hasSymbols(password)) errors.push(RULES.SYMBOLS)
-  if (!errors.length && blacklist.includes(password)) errors.push(RULES.BLACKLIST)
+  if (password.length < minLength) { errors.push(RULES.MIN_LENGTH) }
+  if (password.length > maxLength) { errors.push(RULES.MAX_LENGTH) }
+  if (digits && !hasDigits(password)) { errors.push(RULES.DIGITS) }
+  if (letters && !hasLetters(password)) { errors.push(RULES.LETTERS) }
+  if (uppercase && !hasUppercase(password)) { errors.push(RULES.UPPERCASE) }
+  if (lowercase && !hasLowercase(password)) { errors.push(RULES.LOWERCASE) }
+  if (symbols && !hasSymbols(password)) { errors.push(RULES.SYMBOLS) }
+  if (!errors.length && blacklist.includes(password)) { errors.push(RULES.BLACKLIST) }
 
 
   return {
