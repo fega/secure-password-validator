@@ -4,7 +4,7 @@ Validate Passwords with OWASP standards. [Check OWASP Source Here](https://owasp
 
 ## Motivation
 
-Current methods to validate secure passwords, like enforce at least a number or an uppercase letter have been proved to be ineffective.
+Current methods to validate secure passwords, like enforce at least a number or an uppercase letter have been proven to be ineffective.
 
 For that reason this library focus on ensuring that the passwords have not only those rules, but also enforces a minimum password length and checks it in a blacklist of the most commonly used passwords.
 
