@@ -1,4 +1,5 @@
 # secure-password-validator
+[![Build Status](https://travis-ci.com/fega/secure-password-validator.svg?branch=master)](https://travis-ci.com/fega/secure-password-validator)
 
 Validate Passwords with OWASP standards. [Check OWASP Source Here](https://owasp-top-10-proactive-controls-2018.readthedocs.io/en/latest/c6-implement-digital-identity.html#level-1-passwords).
 
